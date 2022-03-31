@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rejtvény!</h1>
+    <p>
+        Adott a {{pla}} és a {{plb}} szám. Összeműveletezve ezt kapjuk: {{ plmo }}.
+    </p>
+
+    <p>
+        Mi lenne akkor {{fela}} és {{felb}} összeműveletezésének az eredménye?
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="regifela" value="{{fela}}">
+        <input type="hidden" name="regifelb" value="{{felb}}">
+        <input type="number" name="felmo" id="" value="0">
+        <button type="submit">Küld</button>
+    </form>
+
+</body>
+</html>
