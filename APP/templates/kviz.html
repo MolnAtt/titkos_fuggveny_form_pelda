@@ -24,5 +24,23 @@
         <button type="submit">Küld</button>
     </form>
 
+    
+    {% if volt_valasz %}
+    
+        {% if helyes %}
+
+        <p>Helyes!</p>
+            
+        {% else %}
+
+        <p>Béna vagy!</p>
+
+        {% endif %}
+        
+    {% endif %}
+    
+    
+    
+
 </body>
 </html>
